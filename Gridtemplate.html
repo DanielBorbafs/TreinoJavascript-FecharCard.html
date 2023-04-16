@@ -1,0 +1,124 @@
+<header>header</header>
+<nav>
+    <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" name="radio" checked="">
+          <span class="name">HTML</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio">
+          <span class="name">React</span>
+        </label>
+            
+        <label class="radio">
+          <input type="radio" name="radio">
+          <span class="name">Vue</span>
+        </label>
+    </div>
+</nav>
+<section>
+    
+</section>
+<aside>aside</aside>
+<footer><nav>
+    <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" name="radio" checked="">
+          <span class="name">HTML</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio">
+          <span class="name">React</span>
+        </label>
+            
+        <label class="radio">
+          <input type="radio" name="radio">
+          <span class="name">Vue</span>
+        </label>
+    </div>
+</nav></footer>
+
+<style>
+    /* Note: This example only works with Windows Insider Preview Builds 16237+ or the Fall Creators Update. */
+
+body { 
+	font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+	display: grid;
+	grid-template-areas: 
+    "header header header"
+    "nav section aside"
+    "footer footer footer";
+	grid-template-rows: 80px 1fr 50px;
+	grid-template-columns: 15% 1fr 18%;
+	grid-gap: 5px;
+  height: 100vh;
+  margin: 10px;  
+}
+
+header {
+	background: #707070;
+	grid-area: header;
+}
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #EEE;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+}
+nav {
+	background: #C9BFBF;
+	grid-area: nav; 
+}
+
+section {
+	background: #ABABAB;
+	grid-area: section;    
+}
+
+aside {
+	background: #C9C9C9;
+	grid-area: aside; 
+}
+
+footer {
+	background: #707070;
+	grid-area: footer;
+}
+
+header, nav, section, aside, footer {
+	padding: 5px;
+}
+
+</style>
