@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-header">
+      <h2>Card Title</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div class="card-body">
+      <p>Card Content</p>
+    </div>
+  </div>
+
+  
+<style>
+.card {
+  border: 1px solid #ccc;
+  margin: 10px;
+  width: 300px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+}
+.card-body {
+  padding: 10px;
+}
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+</style>
+
+<script>
+ const closeButton = document.querySelector('.close-btn');
+const cardBody = document.querySelector('.card-body');
+
+// define a função para alternar a classe "hidden" do card-body
+function toggleCardBody() {
+  cardBody.classList.toggle('hidden');
+}
+
+// adiciona um ouvinte de evento de clique no botão de fechar para chamar a função toggleCardBody
+closeButton.addEventListener('click', toggleCardBody);
+
+</script>
